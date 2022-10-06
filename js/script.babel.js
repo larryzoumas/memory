@@ -2,40 +2,40 @@
 
 var cardsArray = [{
   'name': 'shell',
-  'img': 'img/blueshell.png'
+  'img': 'img/Abyss_Diana_V2.png'
 }, {
   'name': 'star',
-  'img': 'img/star.png'
+  'img': 'img/Focal_Utopia.png'
 }, {
   'name': 'bobomb',
-  'img': 'img/bobomb.png'
+  'img': 'img/Beyerdynamic_DT_1990_PRO.jpg'
 }, {
   'name': 'mario',
-  'img': 'img/mario.png'
+  'img': 'img/Audeze_LCD_XC.jpg'
 }, {
   'name': 'luigi',
-  'img': 'img/luigi.png'
+  'img': 'img/Audeze_LCD_5.jpg'
 }, {
   'name': 'peach',
-  'img': 'img/peach.png'
+  'img': 'img/Hifiman_Sundara.jpg'
 }, {
   'name': '1up',
-  'img': 'img/1up.png'
+  'img': 'img/Focal_Elegia.jpg'
 }, {
   'name': 'mushroom',
-  'img': 'img/mushroom.png'
+  'img': 'img/Dan_Clark_Aeon_Closed.jpg'
 }, {
   'name': 'thwomp',
-  'img': 'img/thwomp.png'
+  'img': 'img/ZMF_Aolus.jpg'
 }, {
   'name': 'bulletbill',
-  'img': 'img/bulletbill.png'
+  'img': 'img/Sennheiser_800s.jpg'
 }, {
   'name': 'coin',
-  'img': 'img/coin.png'
+  'img': 'img/Sennheiser_HD_600.jpg'
 }, {
-  'name': 'goomba',
-  'img': 'img/goomba.png'
+  'name': 'ZMF_Aolus.jpg',
+  'img': 'img/Hifiman_Arya.jpg'
 }];
 
 var gameGrid = cardsArray.concat(cardsArray).sort(function () {
