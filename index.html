@@ -2,23 +2,43 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  
-  <title>Memory Game</title>
+    <script src="js/script.data.js"></script>
 
-  <link rel="stylesheet" href="css/style.prefix.css">
-  <link rel="icon" type="image/png" href="favicon.ico">
+    <script>
+        let game_type = getAllUrlParams(this.url)['game_type']
+        let game_info = getGameInfo(game_type)
+        //alert('gt=' + game_type)
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Memory Game</title>
+
+    <link rel="stylesheet" href="css/style.prefix.css">
+    <link rel="icon" type="image/png" href="favicon.ico">
 
 </head>
 
 <body>
-<h1 style="text-align:center">Welcome to the FunnyBunny Memory Game :)</h1>
+<div style="margin-right:1em;text-align:right">
+    <a href="/">Original</a>
+    /
+    <a href="/?game_type=headphones">Headphones</a>
+    /
+    <a href="/?game_type=funnybunny">Funnybunny</a>
+</div>
 
-  <div id="game"></div>
+<h1 style="text-align:center">Welcome to the
+    <script>document.write(game_info['title'])</script>
+    Memory Game :)
+</h1>
 
-  <script src="js/script.funnybunny.js"></script>
+<div id="game"></div>
+
+<script src="js/script.js"></script>
+
 </body>
 
 </html>
