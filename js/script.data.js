@@ -72,7 +72,7 @@ function getGameInfo(game_type) {
                 },
                 {
                     'name': '1up',
-                    'img': 'img/headphones/Focal_Elegia.png',
+                    'img': 'img/headphones/Focal_Elegia.jpg',
                 },
                 {
                     'name': 'mushroom',
