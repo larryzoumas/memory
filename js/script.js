@@ -73,15 +73,21 @@ grid.addEventListener('click', function (event) {
             firstGuess = clicked.parentNode.dataset.name;
             console.log(firstGuess);
             clicked.parentNode.classList.add('selected');
+            new Audio('/mp3/cardflip.mp3').play()
         } else {
             secondGuess = clicked.parentNode.dataset.name;
             console.log(secondGuess);
             clicked.parentNode.classList.add('selected');
+            new Audio('/mp3/cardflip.mp3').play()
         }
 
         if (firstGuess && secondGuess) {
             if (firstGuess === secondGuess) {
+                new Audio('/mp3/tada.mp3').play()
+                new Audio('/mp3/childyes.mp3').play()
                 setTimeout(match, delay);
+            } else {
+                new Audio('/mp3/awwcute.mp3').play()
             }
             setTimeout(resetGuesses, delay);
         }
