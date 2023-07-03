@@ -87,7 +87,7 @@ grid.addEventListener('click', function (event) {
                 new Audio('/mp3/childyes.mp3').play()
                 setTimeout(match, delay);
             } else {
-                new Audio('/mp3/awwcute.mp3').play()
+                //new Audio('/mp3/awwcute.mp3').play()
             }
             setTimeout(resetGuesses, delay);
         }
