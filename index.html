@@ -2,40 +2,89 @@
 <html lang="en">
 
 <head>
-    <script src="js/script.data.js"></script>
+  <script src="js/script.data.js"></script>
 
-    <script>
-        let game_type = getAllUrlParams(this.url)['game_type']
-        let game_info = getGameInfo(game_type)
-        //alert('gt=' + game_type)
-    </script>
+  <script>
+      let game_type = getAllUrlParams(this.url)['game_type']
+      let game_info = getGameInfo(game_type)
+      //alert('gt=' + game_type)
+  </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 
-    <title>Memory Game</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <link rel="stylesheet" href="css/style.prefix.css">
-    <link rel="icon" type="image/png" href="favicon.ico">
+  <title>Memory Game</title>
+
+  <link rel="stylesheet" href="css/style.prefix.css">
+  <link rel="icon" type="image/png" href="favicon.ico">
 
 </head>
 
 <body>
 <div style="margin-right:1em;text-align:right">
-    <a href="/">Original</a>
-    /
-    <a href="/?game_type=headphones">Headphones</a>
-    /
-    <a href="/?game_type=funnybunny">Funnybunny</a>
+  <a href="/">Original</a>
+  /
+  <a href="/?game_type=headphones">Headphones</a>
+  /
+  <a href="/?game_type=funnybunny">Funnybunny</a>
 </div>
 
 <h1 style="text-align:center">Welcome to the
-    <script>document.write(game_info['title'])</script>
-    Memory Game :)
+  <script>document.write(game_info['title'])</script>
+  Memory Game :)
 </h1>
 
 <div id="game"></div>
+
+
+<div class="modal" data-backdrop="static"tabindex="-1" id="questionModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Question</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>What headphone is this?</p>
+        <div class="form-check">
+          <div class="noborder">
+            <input class="form-check-input" type="radio" name="option" id="option1" value="option1">
+            <label class="form-check-label" for="option1">
+              Option 1
+            </label>
+          </div>
+
+          <div class="noborder">
+            <input class="form-check-input" type="radio" name="option" id="option2" value="option2">
+            <label class="form-check-label" for="option2">
+              Option 2
+            </label>
+          </div>
+
+          <div class="noborder">
+            <input class="form-check-input" type="radio" name="option" id="option3" value="option3">
+            <label class="form-check-label" for="option3">
+              Option 3
+            </label>
+          </div>
+
+        </div>
+        <!-- add multiple option blocks as needed -->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" onclick="checkAnswer()">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 <script src="js/script.js"></script>
 
