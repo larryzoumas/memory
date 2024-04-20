@@ -3,3 +3,7 @@
 <div *ngFor="let card of gameService.cards">
   <app-game-card [card]="card"></app-game-card>
 </div>
+
+<div class="game-grid">
+  <app-game-card *ngFor="let card of gameService.cards" [card]="card"></app-game-card>
+</div>
